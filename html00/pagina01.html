@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo de Alumnos</title>
 </head>
 <body>
-    <button onclick="loadXMLDoc()">Ejecutar función</button>
-    <table id="demo"></table>
 
-<script>
-function loadXMLDoc() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    const xmlDoc = xhttp.responseXML;
-    const cd = xmlDoc.getElementsByTagName("CD");
-    myFunction(cd);
-  }
-  xhttp.open("GET", "cd_catalog.xml");
-  xhttp.send();
-}
+    <button onclick="loadXMLDoc()">Mostrar Alumnos</button>
+    <table id="demo" border="1"></table>
 
-function myFunction(cd) {
-  let table="<tr><th>Artist</th><th>Title</th></tr>";
-  for (let i = 0; i < cd.length; i++) {
-    table += "<tr><td>" +
-    cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    "</td></tr>";
-  }
-  document.getElementById("demo").innerHTML = table;
-}
-</script>
+    <script>
+        function loadXMLDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                const xmlDoc = xhttp.responseXML;
+                const students = xmlDoc.getElementsByTagName("STUDENT");
+                mostrarTabla(students);
+            }
+            xhttp.open("GET", "alumni_catalog.xml");
+            xhttp.send();
+        }
+
+        function mostrarTabla(students) {
+            let table = "<tr><th>NOMBRE</th><th>ID</th></tr>";
+            for (let i = 0; i < students.length; i++) {
+                const nombre = students[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue;
+                const id = students[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue;
+                table += "<tr><td>" + nombre + "</td><td>" + id + "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>
 
 </body>
 </html>
-</body>
 </html>
