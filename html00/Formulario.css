@@ -6,24 +6,41 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #cce0ff;
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 110vh;
     margin: 0;
     gap: 20px;
 }
 
 form {
-    max-width: 400px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    width: 450px;
+    height: auto;
+    background-color: #eeeeee;
+    box-shadow: 10px 20px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     border: 1px solid #ddd;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #1693c5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 label {
@@ -47,12 +64,12 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
-    border-color: #4CAF50;
+    border-color: #0e20c1;
     outline: none;
 }
 
 input[type="button"], input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #092e77;
     width: 100%;
     color: white;
     border: none;
@@ -68,7 +85,7 @@ input[type="button"], input[type="submit"] {
 }
 
 input[type="button"]:hover {
-    background-color: #45a049;
+    background-color: #1d3f71;
 }
 
 form h1 {
