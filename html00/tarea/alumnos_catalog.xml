@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ALUMNOS_CATALOG>
+  <STUDENT>
+    <NAME>Johan Andrade Merino</NAME>
+    <ID>2005001</ID>
+    <AGE>19</AGE>
+    <MAJOR>LISTI</MAJOR>
+    <YEAR>1</YEAR>
+    <EMAIL>JAMtheProgrammer003@universidad.uv.mx</EMAIL>
+    <PHONE>111-222-333</PHONE>
+    <ENROLLMENT_DATE>2020-02-01</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Rodrigo Toral Bellido</NAME>
+    <ID>2004002</ID>
+    <AGE>21</AGE>
+    <MAJOR>LISTILLO</MAJOR>
+    <YEAR>3</YEAR>
+    <EMAIL>eliderlisti@universidad.uv.mx</EMAIL>
+    <PHONE>111-222-444</PHONE>
+    <ENROLLMENT_DATE>2022-01-02</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Pablo Fulanito Muñoz</NAME>
+    <ID>2005003</ID>
+    <AGE>20</AGE>
+    <MAJOR>LIS</MAJOR>
+    <YEAR>2</YEAR>
+    <EMAIL>micuñadoeac@universidad.uv.mx</EMAIL>
+    <PHONE>111-222-555</PHONE>
+    <ENROLLMENT_DATE>2024-04-17</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Ivan Huerta Neftalí</NAME>
+    <ID>2005004</ID>
+    <AGE>20</AGE>
+    <MAJOR>Moda</MAJOR>
+    <YEAR>4</YEAR>
+    <EMAIL>palesbinario@universidad.uv.mx</EMAIL>
+    <PHONE>111-222-666</PHONE>
+    <ENROLLMENT_DATE>2021-09-04</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Adolfo Atanasio Hernandez</NAME>
+    <ID>2005005</ID>
+    <AGE>22</AGE>
+    <MAJOR>Musica</MAJOR>
+    <YEAR>7</YEAR>
+    <EMAIL>nata030tumbao@universidad.uv.mx</EMAIL>
+    <PHONE>111-222-777</PHONE>
+    <ENROLLMENT_DATE>2020-05-21</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Pitbull Layu Mitzuko</NAME>
+    <ID>2002008</ID>
+    <AGE>23</AGE>
+    <MAJOR>Master</MAJOR>
+    <YEAR>4</YEAR>
+    <EMAIL>vsdestroyer@universidad.uv.mx</EMAIL>
+    <PHONE>111-222-888</PHONE>
+    <ENROLLMENT_DATE>2019-10-15</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Pita Perez Palasios</NAME>
+    <ID>2001009</ID>
+    <AGE>22</AGE>
+    <MAJOR>Economia</MAJOR>
+    <YEAR>3</YEAR>
+    <EMAIL>pitahayatokurosai@universidad.uv.mx</EMAIL>
+    <PHONE>222-333-444</PHONE>
+    <ENROLLMENT_DATE>2021-01-03</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Mak Romero Nava</NAME>
+    <ID>2005010</ID>
+    <AGE>19</AGE>
+    <MAJOR>Mecanica</MAJOR>
+    <YEAR>4</YEAR>
+    <EMAIL>elmak777jochos@universidad.uv.mx</EMAIL>
+    <PHONE>222-333-555</PHONE>
+    <ENROLLMENT_DATE>2020-11-17</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Luis Richards Downey</NAME>
+    <ID>2005011</ID>
+    <AGE>18</AGE>
+    <MAJOR>Electricidad</MAJOR>
+    <YEAR>2</YEAR>
+    <EMAIL>mrelectro005@universidad.uv.mx</EMAIL>
+    <PHONE>333-222-111</PHONE>
+    <ENROLLMENT_DATE>2023-12-12</ENROLLMENT_DATE>
+  </STUDENT>
+  <STUDENT>
+    <NAME>Summer Lummer Lovof</NAME>
+    <ID>2006012</ID>
+    <AGE>18</AGE>
+    <MAJOR>Medicina</MAJOR>
+    <YEAR>1</YEAR>
+    <EMAIL>sumlumlov@universidad.uv.mx</EMAIL>
+    <PHONE>444-333-222</PHONE>
+    <ENROLLMENT_DATE>2024-06-22</ENROLLMENT_DATE>
+  </STUDENT>
+</ALUMNOS_CATALOG>
