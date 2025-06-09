@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button aria-label="Botón Cerrar">x</button>
+
+    <label for="u">Nombre de usuario:</label>
+    <input type="text" id="u" aria-describedby="i">
+    <p id="i">El campo debe tener 6 caracteres alfanuméricos.</p>
+
+    <button aria-expanded="false" aria-controls="c" id="menu">Menú</button>
+    <nav id="c" hidden>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+        </ul>
+    </nav>
+
+    <div role="tablist">
+        <button id="tab-1" role="tab" aria-selected="true" aria-controls="panel-1" title="Contenido pestaña 1 imagen 1">Pestaña 1</button>
+        <button id="tab-2" role="tab" aria-selected="false" aria-controls="panel-2" title="Contenido pestaña 2 imagen 2">Pestaña 2</button>
+    </div>
+
+    <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+        <fieldset>
+            Contenido de la pestaña 1
+            <img src="https://picsum.photos/id/1/200/200" alt="Hombre en computadora">
+        </fieldset>
+    </div>
+
+    <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+        <fieldset>
+            Contenido de la pestaña 2
+            <img src="https://picsum.photos/id/2/200/200" alt="Hombre con café">
+        </fieldset>
+    </div>
+
+    <script>
+
+    </script>
+
+    <script>
+        const menu = document.getElementById("menu")
+        menu.addEventListener("click", () => {
+            let enlaces = document.getElementById("c")
+
+            // enlaces.setAttribute("hidden", "true") No funciona
+
+            // Mi solución:
+            // if (enlaces.getAttributeNames().includes("hidden")) {
+            //     enlaces.removeAttribute("hidden");
+            // } else {
+            //     enlaces.setAttribute("hidden", "")
+            // }
+
+            // // Solución del profe:
+            // if (enlaces.getAttribute("hidden") == "") {
+            //     enlaces.removeAttribute("hidden");
+            // } else {
+            //     enlaces.setAttribute("hidden", "")
+            // }
+
+            // Solución mixta entre la anterior y las diapositivas incluyendo aria-expanded
+            // para mejorar la accesibilidad automática que da el sistema.
+            if (enlaces.getAttributeNames().includes("hidden")) {
+                enlaces.removeAttribute("hidden");
+                menu.setAttribute("aria-expanded", "true")
+            } else {
+                enlaces.setAttribute("hidden", "")
+                menu.setAttribute("aria-expanded", "false")
+            }
+
+            // Solución de las diapositivas:
+            //const menuButton = document.querySelector("[aria-expanded]");
+            //console.log(menuButton)
+            //const navigation = document.getElementById("main-nav");
+            //
+            //menuButton.addEventListener("click", () => {
+            //    const isExpanded = menuButton.getAttribute("aria-expanded") === "true" || false
+            //    menuButton.setAttribute("aria-expanded", !isExpanded)
+            //    navigation.hidden = isExpanded
+            //})
+        })
+
+        // Lógica para manipulación de páneles
+        const tabs = document.querySelectorAll('[role="tab"]')
+        const paneles = document.querySelectorAll('[role="tabpanel"]')
+
+        tabs.forEach(element => {
+            element.addEventListener("click", () => {
+                tabs.forEach(t => {
+                    t.setAttribute("aria-selected", "false")
+                    paneles.forEach(p => {
+                        p.setAttribute("hidden", "")
+                    });
+                });
+                element.setAttribute("aria-selected", "true")
+                const panelId = element.getAttribute("aria-controls")
+                document.getElementById(panelId).removeAttribute("hidden")
+            })
+        });
+    </script>
+</body>
+</html>
